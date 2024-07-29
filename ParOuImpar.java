@@ -7,8 +7,12 @@ public class ParOuImpar {
         Random random = new Random();
         
         System.out.println("Vamos jogar Par ou Ímpar!");
-        System.out.print("Escolha Par ou Ímpar (P/I): ");
-        String escolhaJogador = scanner.next().toUpperCase();
+        
+        String escolhaJogador;
+        do {
+            System.out.print("Escolha Par ou Ímpar (P/I): ");
+            escolhaJogador = scanner.next().toUpperCase();
+        } while (!escolhaJogador.equals("P") && !escolhaJogador.equals("I"));
         
         System.out.print("Escolha um número de 0 a 5: ");
         int numeroJogador = scanner.nextInt();
@@ -37,5 +41,6 @@ public class ParOuImpar {
         scanner.close();
     }
 }
+
 
 
