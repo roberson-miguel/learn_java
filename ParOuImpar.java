@@ -104,7 +104,7 @@ class JogoParOuImpar {
     }
 }
 
-public class Main {
+public class ParOuImpar {
     public static void main(String[] args) throws InterruptedException {
         JogoParOuImpar jogo = new JogoParOuImpar();
         jogo.iniciarJogo();
