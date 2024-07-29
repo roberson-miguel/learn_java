@@ -2,7 +2,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class ParOuImpar {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
         
@@ -15,31 +15,16 @@ public class ParOuImpar {
         
         System.out.println("Você escolheu: " + numeroJogador);
         System.out.println("Computador está escolhendo um número...");
-        
-        try {
-            Thread.sleep(2000); // Pausa de 2 segundos
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        Thread.sleep(2000); // Pausa de 2 segundos
         
         int numeroComputador = random.nextInt(6); // Número aleatório de 0 a 5
         System.out.println("O computador escolheu: " + numeroComputador);
         
-        try {
-            Thread.sleep(1500); // Pausa de 1.5 segundos
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        
+        Thread.sleep(1500); // Pausa de 1.5 segundos
         int soma = numeroJogador + numeroComputador;
         System.out.println("A soma é: " + soma);
         
-        try {
-            Thread.sleep(1500); // Pausa de 1.5 segundos
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        
+        Thread.sleep(1500); // Pausa de 1.5 segundos
         boolean jogadorVenceu = (soma % 2 == 0 && escolhaJogador.equals("P")) ||
                                 (soma % 2 != 0 && escolhaJogador.equals("I"));
         
@@ -52,4 +37,5 @@ public class ParOuImpar {
         scanner.close();
     }
 }
+
 
